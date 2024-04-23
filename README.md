@@ -2,39 +2,25 @@
 
 ## Assignment Description
 
-[KMeans](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) was used to cluster a set of images **based on their metadata.** The measure of success was subjective; the right features and number of clusters used was decided upon when viewing the images in each cluster and determining whether they "seemed" to belong together.
+[KMeans](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) was used to cluster a set of images **based on their metadata.** The success of the clustering was determined subjectively; the right features and number of clusters were decided upon by visually inspecting whether images in each cluster appeared to belong together. The optimal number of clusters, chosen based on the highest average silhouette score (0.9813282942974106), was 22.
 
 ### The Images
 
-These images represent more than 400 works of fine art from museum collections and galleries across several countries, curated and analyzed for inspiration and information on effective ways to visually communicate uncertainty, ambiguity, and vulnerability. The selected artworks were chosen for their unique ability to convey ***uncertainty*** using a range of approaches and techniques. The images were used to inspire better design of visual representations of uncertainty in data, as [traditional methods and techniques were not working very well](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty).
+These images represent over 400 works of fine art from museum collections and galleries across several countries. They were curated and analyzed to provide inspiration on how to effectively communicate uncertainty, ambiguity, and vulnerability through visual representations. The artworks were selected for their unique ability to convey ***uncertainty*** using various approaches and techniques. This selection was intended to inspire the design of better visual representations of uncertainty in data, addressing the shortcomings of [traditional methods and techniques](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty).
 
+### Detailed Code Explanation
 
-#### Detailed Code Explanation
-
-The provided code snippet demonstrates how the KMeans clustering was implemented to organize a set of images based on selected metadata features. Here is a detailed breakdown of each component of the code:
+The provided code snippet outlines how the KMeans clustering was implemented to organize a set of images based on selected metadata features. Here is a detailed breakdown of each component of the code:
 
 ```python
 # Subset of metadata features used for clustering
 X = data[['primary_medium', 'representation', 'representation_semi', 'spatial_dimension']]
 
-## Description
+## Description:
+# X is assigned a DataFrame consisting of four columns:
+# - 'primary_medium': This could refer to the material or technique used in the artworks.
+# - 'representation': Likely indicates the style or genre of the artwork.
+# - 'representation_semi': Could denote a more detailed classification within the broader 'representation' category.
+# - 'spatial_dimension': Pertains to the dimensions or scale which might affect the perception of the artwork.
 
-This line defines the subset of features from the dataset that are used for clustering. X is assigned a DataFrame consisting of four columns:
-
-# primary_medium: This could refer to the material or technique used in the artworks.
-# representation: Likely indicates the style or genre of the artwork.
-# representation_semi: Could denote a more detailed classification within the broader representation category.
-# spatial_dimension: Pertains to the dimensions or scale which might affect the perception of the artwork.
-
-These features are presumably pivotal in influencing how artworks are grouped together, reflecting similarities in material, style, and scale.
-
-#### Code Explanation
-
-Included in the provided code snippet:
-
-# The number of clusters in the final model was set to 22
-my_n_clusters = 22
-
-# Looping through each cluster to display a limited number of image thumbnails
-for i in range(0, max(km.labels_)+1):
-    # Code omitted for brevity. This part initialized the cluster display and set a limit for images displayed per cluster.
+These features are pivotal in influencing how artworks are grouped together, reflecting similarities in material, style, and scale.
