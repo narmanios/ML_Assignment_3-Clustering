@@ -2,7 +2,7 @@
 
 ## Assignment Description
 
-KMeans was used [KMeans](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) to cluster a set of images **based on their metadata.** The measure of success was subjective; the right features and number of clusters used was decided upon when viewing the images in each cluster and determining whether they "seemed" to belong together.
+[KMeans](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) was used to cluster a set of images **based on their metadata.** The measure of success was subjective; the right features and number of clusters used was decided upon when viewing the images in each cluster and determining whether they "seemed" to belong together.
 
 ### The Images
 
