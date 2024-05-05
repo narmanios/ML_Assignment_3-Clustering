@@ -6,8 +6,7 @@
 
 ### The Images
 
-These images represent over 400 works of fine art from museum collections and galleries across several countries. They were curated and analyzed to provide inspiration on how to effectively communicate uncertainty, ambiguity, and vulnerability through visual representations. The artworks were selected for their unique ability to convey ***uncertainty*** using various approaches and techniques. This selection was intended to inspire the design of better visual representations of uncertainty in data, addressing the shortcomings of [traditional methods and techniques](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty).
-
+These images represent over 400 works of fine art from museum collections and galleries across several countries. They were curated and analyzed to provide inspiration on how to effectively communicate uncertainty, ambiguity, and vulnerability through visual representations. 
 ### Detailed Code Explanation
 
 The provided code snippet outlines how the KMeans clustering was implemented to organize a set of images based on selected metadata features. Here is a detailed breakdown of each component of the code:
